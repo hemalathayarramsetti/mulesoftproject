@@ -33,6 +33,7 @@ studentnumber: 8367756645
 			<batch:process-records >
 				<batch:step name="Batch_Step" doc:id="eb1ee96a-77d7-4b0b-8202-157f248df213" >
 					<batch:aggregator doc:name="Batch Aggregator" doc:id="a982d090-2cbf-4547-ad0d-e4c2b7ce0c7a" size="20">
+						<logger level="INFO" doc:name="Logger" doc:id="00816a01-4355-46ea-b9ab-2f217afc0d74" message="#[payload]" /><logger level="INFO" doc:name="Logger" doc:id="00816a01-4355-46ea-b9ab-2f217afc0d74" message="#[payload]" />
 						<logger level="INFO" doc:name="Logger" doc:id="00816a01-4355-46ea-b9ab-2f217afc0d74" message="#[payload]" />
 						<db:bulk-insert doc:name="Bulk insert" doc:id="a9a48532-e63d-4e74-8b64-9f5421c8dc83" config-ref="Database_Config">
 							<db:sql ><![CDATA[INSERT INTO fifteen.student (studentid, studentname, studentnumber)
